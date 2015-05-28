@@ -7,6 +7,7 @@
 package Ejecutar;
 
 import controlador.ClsUsuario;
+import modelo.IdUsuario;
 import vista.seguridad.FormUsuario;
 
 /**
@@ -21,10 +22,13 @@ public class Principal {
     public static void main(String[] args) {
         //ClsUsuario us = new ClsUsuario();
         //us.createUsuario(1, "jhopes", "123");
-        FormUsuario f = new FormUsuario();
+        /*FormUsuario f = new FormUsuario();
         f.setVisible(true);
-        f.setSize(200, 200);
-                
+        f.setSize(200, 200);*/
+        IdUsuario idus = new IdUsuario();
+        ClsUsuario clsus = new ClsUsuario();
+        idus.setCondicion(" WHERE login LIKE '%jho%' order by 1 ");
+        clsus.SeleccionarUsuario(idus);      
     }
     
 }

@@ -10,15 +10,24 @@ package modelo;
  *
  * @author JOEL
  */
-public class IdUsuario {
-    int id_usuario;
-    String login, pw;
+public class IdUsuario extends IdSistema {
+    String id_usuario;
+      
+    String login, pw, confirmPw;
 
-    public int getId_usuario() {
+    public String getConfirmPw() {
+        return confirmPw;
+    }
+
+    public void setConfirmPw(String confirmPw) {
+        this.confirmPw = confirmPw;
+    }
+
+    public String getId_usuario() {
         return id_usuario;
     }
 
-    public void setId_usuario(int id_usuario) {
+    public void setId_usuario(String id_usuario) {
         this.id_usuario = id_usuario;
     }
 
